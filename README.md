@@ -83,3 +83,17 @@ schedule = {
 ```
 From, To — отметки абсолютного времени в формате UNIX timestamp_nanoseconds откуда и до куда в элемент войдёт трафик.
 SequenceNumber — очередность элемента в последовательности.
+
+***********************
+
+**приложение захвата видео из браузера:**
+
+приложение расположено по адресу https://facecast.net/webcapture/ управление модулем реализовано через GET параметры:
+
+- **gateway** - адрес шлюза (wss://wsgateway.facecast.io)
+- **streamerID** - id cтримера, созданного чрезе API
+- **key** - ключ стримера
+
+например:  https://facecast.net/webcapture/?gateway=wss://wsgateway.facecast.io&streamerID=fakestreamerid&key=fakestreamerkey
+
+после запуска приложения необходимо согласиться на доступ к камере, микрофону - возможны несколько запросов, потом выбрать камеру и источник звука и нажать Go Live
